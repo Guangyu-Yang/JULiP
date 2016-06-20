@@ -64,11 +64,11 @@ Given a set of alignment input .bam files, JULiP produces two intermediate data 
 ## Example  
 sequential version:  
 java -jar FeatureSelection.jar \  
-	 -model generateSplicesAndRegions \  
-	 -bamFileList bamFileList.txt  
+\t	 -model generateSplicesAndRegions \  
+\t	 -bamFileList bamFileList.txt  
 
 java -jar FeatureSelection.jar \  
-	 -model generateIntronFiles  
+\t	 -model generateIntronFiles  
 
 java -jar FeatureSelection.jar \  
      -model intronsSelection \  
