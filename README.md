@@ -1,4 +1,4 @@
-##JULiP - An efficient model for accurate intron selection from multiple RNA-seq samples
+###JULiP - An efficient model for accurate intron selection from multiple RNA-seq samples
 
 Copyright (C) 2012-2016, and GNU GPL, by Guangyu Yang, Liliana Florea
 
@@ -7,9 +7,9 @@ Includes portions copyright from:
 SAMtools - Copyright (C) 2008-2009, Genome Research Ltd, Heng Li
 
 
-##Table of contents
+###Table of contents
 
-- JULiP - An efficient model for accurate intron selection from multiple RNA-seq samples  
+- [JULiP - An efficient model for accurate intron selection from multiple RNA-seq samples]()  
 - [Table of contents](##Table of contents)  
 - [What is JULiP?](##What is JULiP?)  
 - [Usage](##Usage)  
@@ -18,7 +18,7 @@ SAMtools - Copyright (C) 2008-2009, Genome Research Ltd, Heng Li
 - [Support](##Support)  
 
 
-##What is JULiP?
+###What is JULiP?
 
 JULiP is a program for Intron selection from RNA-seq reads aligned to a genome from multi samples. 
 
@@ -27,7 +27,7 @@ Julip produces high quality in introns in two stages. Stage 1 collect the intron
 determine the gene regions by introns and mapped regions
 
 
-##Usage
+###Usage
 
 Sequantial version:  
 ```
@@ -59,13 +59,13 @@ https://hadoop.apache.org/docs/r2.7.2/hadoop-project-dist/hadoop-common/SingleCl
 and this link for cluster setup,  
 https://hadoop.apache.org/docs/r2.7.2/hadoop-project-dist/hadoop-common/ClusterSetup.html  
 
-##Input/Output  
+###Input/Output  
 The primary input to CLASS is a set of short read alignments in BAM format and sorted by chromosome and position, for instance one produced with the program Tophat2 (http://tophat.cbcb.umd.edu).
 
 Given a set of alignment input .bam files, JULiP produces two intermediate data files, x.depth and x.splice in the temporary working directory.
 
 
-##Example  
+###Example  
 Sequential version:  
 ```
 java -jar FeatureSelection.jar \  
@@ -88,6 +88,6 @@ hadoop jar FeatureSelectionForHadoop.jar -intronFileList intronFileList.txt
 hadoop fs -cat  /user/hadoop/splice_results/* > introns.txt.uniq  
 ```
 
-##Support
+###Support
 
 Contact us at: gyang22@jhu.edu, florea@jhu.edu
