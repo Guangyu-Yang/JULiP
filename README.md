@@ -31,7 +31,7 @@ determine the gene regions by introns and mapped regions
 
 Sequantial version:  
 ```
-Usage: java -jar FeatureSelection.jar [options]  
+Usage: java -jar JULiP.jar [options]  
 Options:  
  -bamFileList VAL     : a file contain the paths of the subExon files  
  -gene VAL            : geneId ID  
@@ -49,7 +49,7 @@ Options:
 ```
 Parallel version:  
 ```
-Usage: hadoop jar FeatureSelectionForHadoop.jar [options]  
+Usage: hadoop jar JULiPForHadoop.jar [options]  
 Options:  
  -intronFileList VAL  : a file contain the paths of the intron files  
 ```
@@ -68,14 +68,14 @@ Given a set of alignment input .bam files, JULiP produces two intermediate data 
 ### <a name="example"></a> Example  
 Sequential version:  
 ```
-java -jar FeatureSelection.jar \  
+java -jar JULiP.jar \  
 	 -model generateSplicesAndRegions \  
 	 -bamFileList bamFileList.txt  
 
-java -jar FeatureSelection.jar \  
+java -jar JULiP.jar \  
 	 -model generateIntronFiles  
 
-java -jar FeatureSelection.jar \  
+java -jar JULiP.jar \  
      -model intronsSelection \  
      -gene all \  
      -geneList genes.txt \  
@@ -84,7 +84,7 @@ java -jar FeatureSelection.jar \
 Parallel version:  
 ```
 hadoop fs -mkdir -p /user/hadoop  
-hadoop jar FeatureSelectionForHadoop.jar -intronFileList intronFileList.txt  
+hadoop jar JULiPForHadoop.jar -intronFileList intronFileList.txt  
 hadoop fs -cat  /user/hadoop/splice_results/* > introns.txt.uniq  
 ```
 
