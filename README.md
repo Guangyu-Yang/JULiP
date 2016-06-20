@@ -32,6 +32,7 @@ determine the gene regions by introns and mapped regions
 ## Usage
 
 Sequantial version:  
+```
 Usage: java -jar FeatureSelection.jar [options]  
 Options:  
  -bamFileList VAL     : a file contain the paths of the subExon files  
@@ -48,7 +49,7 @@ Options:
  -spliceFileList VAL  : a file contain the paths of the splice files  
  -stepSize N          : step size (default: 1.0)  
  -subExonFileList VAL : a file contain the paths of the subExon files  
-
+```
 Parallel version:  
 configure Hadoop  
 See this official link for setting up a single node cluster  
