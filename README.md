@@ -7,6 +7,7 @@ Includes portions copyright from:
 SAMtools - Copyright (C) 2008-2009, Genome Research Ltd, Heng Li
 --------------------------------------------------------------------
 # Table of contents
+
 JULiP - An efficient model for accurate intron selection from multiple RNA-seq samples
 Table of contents
 What is CLASS?
@@ -27,6 +28,7 @@ Julip produces high quality in introns in two stages. Stage 1 collect the intron
 determine the gene regions by introns and mapped regions
 -------------------------------------------------------------------
 # Usage
+
 Sequantial version:
 Usage: java -jar FeatureSelection.jar [options]
 Options:
@@ -80,10 +82,12 @@ hadoop jar FeatureSelectionForHadoop.jar
 $HADOOP_HOME/bin/hadoop fs -cat  /user/hadoop/splice_results/* > introns.txt.uniq
 --------------------------------------------------------------------
 # Terms of use
+
 This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
 This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 You should have received (LICENSE.txt) a copy of the GNU General Public License along with this program; if not, you can obtain one from http://www.gnu.org/licenses/gpl.txt or by writing to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 
 --------------------------------------------------------------------
 # Support
+
 Contact us at: gyang22@jhu.edu, florea@jhu.edu
