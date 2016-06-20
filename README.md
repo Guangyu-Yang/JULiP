@@ -10,13 +10,21 @@ SAMtools - Copyright (C) 2008-2009, Genome Research Ltd, Heng Li
 # Table of contents
 
 JULiP - An efficient model for accurate intron selection from multiple RNA-seq samples
+
 Table of contents
+
 What is CLASS?
+
 Usage
+
 Input/Output
+
 Example
+
 Versions
+
 Terms of use
+
 Support
 
 -------------------------------------------------------------------
