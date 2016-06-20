@@ -62,7 +62,23 @@ https://hadoop.apache.org/docs/r2.7.2/hadoop-project-dist/hadoop-common/ClusterS
 ### <a name="inputoutput"></a> Input/Output  
 The primary input to CLASS is a set of short read alignments in BAM format and sorted by chromosome and position, for instance one produced with the program Tophat2 (http://tophat.cbcb.umd.edu).
 
-Given a set of alignment input .bam files, JULiP produces two intermediate data files, x.depth and x.splice in the temporary working directory.
+Given a set of alignment input x.bam files, JULiP produces two type of intermediate data files, regions.txt, splices.txt and introns.txt in the .bam file directory.
+
+- The format of the regions.txt file is:  
+chrom_id position #_of_reads_on_the_position  
+
+- The format of the splices.txt file is:  
+chrom_id start_intron_position end_intron_position #_of_supporting_reads strand  
+
+- The format of the introns.txt file is:
+chrom_id start_intron_position end_intron_position #_of_supporting_reads strand
+
+The final output, consisting of selected introns.
+- The format of the output file is:
+chrom_id start_intron_position end_intron_position selection_flag
+
+
+NOTE: place .bam files in different directories.
 
 
 ### <a name="example"></a> Example  
