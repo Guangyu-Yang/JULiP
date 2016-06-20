@@ -22,9 +22,7 @@ SAMtools - Copyright (C) 2008-2009, Genome Research Ltd, Heng Li
 
 JULiP is a program for Intron selection from RNA-seq reads aligned to a genome from multi samples. 
 
-Julip produces high quality in introns in two stages. Stage 1 collect the introns from multiple samples extracted from spliced read alignments, filtered the low quality introns. Stage 2 use Lasso regulated linear programming to determine a set of introns for each gene.
-
-determine the gene regions by introns and mapped regions
+Julip generate reliable introns in two stages. Stage 1 collect the introns from multiple samples extracted from spliced read alignments, filter the low quality introns, detect gene regions. Stage 2 use Lasso regulated linear programming to determine a set of introns for each gene region.
 
 
 ### <a name="usage"></a> Usage
@@ -62,7 +60,7 @@ https://hadoop.apache.org/docs/r2.7.2/hadoop-project-dist/hadoop-common/ClusterS
 ### <a name="inputoutput"></a> Input/Output  
 The primary input to JULiP is a set of short read alignments in BAM format and sorted by chromosome and position, for instance one produced with the program Tophat2 (http://tophat.cbcb.umd.edu).
 
-Given a set of alignment input x.bam files, JULiP.jar produces three type of intermediate data files, regions.txt, splices.txt and introns.txt in the .bam file directory. An gene.txt (contains all the detected gene region) and three list files (contain the paths of the regions.txt, splices.txt and introns.txt) in working directory.
+Given a set of alignment input x.bam files, JULiP produces three type of intermediate data files, regions.txt, splices.txt and introns.txt in the .bam file directory. An gene.txt (contains all the detected gene region) and three list files (contain the paths of the regions.txt, splices.txt and introns.txt) in working directory.
 
 - The format of the regions.txt file is:  
 chrom_id position #_of_reads_on_the_position  
@@ -76,7 +74,6 @@ chrom_id start_intron_position end_intron_position #_of_supporting_reads strand
 The final output, consisting of selected introns.
 - The format of the output file is:  
 chrom_id start_intron_position end_intron_position selection_flag
-
 
 NOTE: place .bam files in different directories.
 
