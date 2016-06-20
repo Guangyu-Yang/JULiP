@@ -15,7 +15,7 @@ SAMtools - Copyright (C) 2008-2009, Genome Research Ltd, Heng Li
 - [Usage](##Usage)  
 - [Input/Output](##Input/Output)  
 - [Example](##Example)   
-- Support  
+- [Support](##Support)  
 
 
 ##What is JULiP?
@@ -50,12 +50,14 @@ Options:
 Parallel version:  
 ```
 Usage: hadoop jar FeatureSelectionForHadoop.jar [options]  
+Options:  
  -intronFileList VAL  : a file contain the paths of the intron files  
 ```
-configure Hadoop  
-See this official link for setting up a single node cluster  
+Configure Hadoop:  
+See this official link for setting up a single node cluster,  
 https://hadoop.apache.org/docs/r2.7.2/hadoop-project-dist/hadoop-common/SingleCluster.html  
-and this link for cluster setup: https://hadoop.apache.org/docs/r2.7.2/hadoop-project-dist/hadoop-common/ClusterSetup.html  
+and this link for cluster setup,  
+https://hadoop.apache.org/docs/r2.7.2/hadoop-project-dist/hadoop-common/ClusterSetup.html  
 
 ##Input/Output  
 The primary input to CLASS is a set of short read alignments in BAM format and sorted by chromosome and position, for instance one produced with the program Tophat2 (http://tophat.cbcb.umd.edu).
@@ -82,7 +84,7 @@ java -jar FeatureSelection.jar \
 Parallel version:  
 ```
 hadoop fs -mkdir -p /user/hadoop  
-hadoop jar FeatureSelectionForHadoop.jar  
+hadoop jar FeatureSelectionForHadoop.jar -intronFileList intronFileList.txt  
 hadoop fs -cat  /user/hadoop/splice_results/* > introns.txt.uniq  
 ```
 
