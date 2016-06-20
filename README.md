@@ -62,7 +62,7 @@ Given a set of alignment input .bam files, JULiP produces two intermediate data 
 
 
 ## Example  
-sequential version:  
+Sequential version:  
 ```
 java -jar FeatureSelection.jar \  
 	 -model generateSplicesAndRegions \  
@@ -77,11 +77,12 @@ java -jar FeatureSelection.jar \
      -geneList genes.txt \  
      -outFile introns_selection_result.txt  
 ```
-parallel version:  
+Parallel version:  
+```
 hadoop fs -mkdir -p /user/hadoop  
 hadoop jar FeatureSelectionForHadoop.jar  
-$HADOOP_HOME/bin/hadoop fs -cat  /user/hadoop/splice_results/* > introns.txt.uniq  
-
+hadoop fs -cat  /user/hadoop/splice_results/* > introns.txt.uniq  
+```
 
 ## Terms of use  
 
