@@ -5,6 +5,7 @@ Copyright (C) 2012-2016, and GNU GPL, by Guangyu Yang, Liliana Florea
 Includes portions copyright from:
 
 SAMtools - Copyright (C) 2008-2009, Genome Research Ltd, Heng Li
+
 --------------------------------------------------------------------
 # Table of contents
 
@@ -26,6 +27,7 @@ JULiP is a program for Intron selection from RNA-seq reads aligned to a genome f
 Julip produces high quality in introns in two stages. Stage 1 collect the introns from multiple samples extracted from spliced read alignments, filtered the low quality introns. Stage 2 use Lasso regulated linear programming to determine a set of introns for each gene.
 
 determine the gene regions by introns and mapped regions
+
 -------------------------------------------------------------------
 # Usage
 
@@ -53,7 +55,6 @@ See this official link for setting up a single node cluster
 https://hadoop.apache.org/docs/r2.7.2/hadoop-project-dist/hadoop-common/SingleCluster.html
 and this link for cluster setup: https://hadoop.apache.org/docs/r2.7.2/hadoop-project-dist/hadoop-common/ClusterSetup.html
 
-
 -------------------------------------------------------------------
 # Input/Output
 The primary input to CLASS is a set of short read alignments in BAM format and sorted by chromosome and position, for instance one produced with the program Tophat2 (http://tophat.cbcb.umd.edu).
@@ -80,6 +81,7 @@ parallel version:
 hadoop fs -mkdir -p /user/hadoop
 hadoop jar FeatureSelectionForHadoop.jar
 $HADOOP_HOME/bin/hadoop fs -cat  /user/hadoop/splice_results/* > introns.txt.uniq
+
 --------------------------------------------------------------------
 # Terms of use
 
