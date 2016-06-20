@@ -1,6 +1,6 @@
 ### <a name="julip"></a> JULiP - An efficient model for accurate intron selection from multiple RNA-seq samples
 
-Copyright (C) 2012-2016, and GNU GPL, by Guangyu Yang, Liliana Florea
+Copyright (C) 2016-2018, and GNU GPL, by Guangyu Yang, Liliana Florea
 
 Includes portions copyright from:
 
