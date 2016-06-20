@@ -34,20 +34,20 @@ determine the gene regions by introns and mapped regions
 Sequantial version:  
 Usage: java -jar FeatureSelection.jar [options]  
 Options:  
-\ -bamFileList VAL     : a file contain the paths of the subExon files  
-\ -gene VAL            : geneId ID  
-\ -geneList VAL        : a file contain the gene names  
-\ -intronFileList VAL  : a file contain the paths of the intron files  
-\ -model VAL           : generateSpliceAndRegionFiles: generate splice & region files  
-\                        generateIntronFiles: generate intron files  
-\                        intronsSelection: do intron selection  
-\ -noiseLevel N        : noise level (default: 6)  
-\ -outFile VAL         : a file contain the paths of the output file  
-\ -p N                 : p-norm (default: 1.0)  
-\ -regionFileList VAL  : a file contain the paths of the region files  
-\ -spliceFileList VAL  : a file contain the paths of the splice files  
-\ -stepSize N          : step size (default: 1.0)  
-\ -subExonFileList VAL : a file contain the paths of the subExon files  
+ -bamFileList VAL     : a file contain the paths of the subExon files  
+ -gene VAL            : geneId ID  
+ -geneList VAL        : a file contain the gene names  
+ -intronFileList VAL  : a file contain the paths of the intron files  
+ -model VAL           : generateSpliceAndRegionFiles: generate splice & region files  
+                        generateIntronFiles: generate intron files  
+                        intronsSelection: do intron selection  
+ -noiseLevel N        : noise level (default: 6)  
+ -outFile VAL         : a file contain the paths of the output file  
+ -p N                 : p-norm (default: 1.0)  
+ -regionFileList VAL  : a file contain the paths of the region files  
+ -spliceFileList VAL  : a file contain the paths of the splice files  
+ -stepSize N          : step size (default: 1.0)  
+ -subExonFileList VAL : a file contain the paths of the subExon files  
 
 Parallel version:  
 configure Hadoop  
@@ -63,19 +63,20 @@ Given a set of alignment input .bam files, JULiP produces two intermediate data 
 
 ## Example  
 sequential version:  
+```
 java -jar FeatureSelection.jar \  
-\t	 -model generateSplicesAndRegions \  
-\t	 -bamFileList bamFileList.txt  
+	 -model generateSplicesAndRegions \  
+	 -bamFileList bamFileList.txt  
 
 java -jar FeatureSelection.jar \  
-\t	 -model generateIntronFiles  
+	 -model generateIntronFiles  
 
 java -jar FeatureSelection.jar \  
      -model intronsSelection \  
      -gene all \  
      -geneList genes.txt \  
      -outFile introns_selection_result.txt  
-
+```
 parallel version:  
 hadoop fs -mkdir -p /user/hadoop  
 hadoop jar FeatureSelectionForHadoop.jar  
