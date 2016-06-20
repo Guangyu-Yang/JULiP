@@ -1,4 +1,4 @@
-# JULiP - An efficient model for accurate intron selection from multiple RNA-seq samples
+## JULiP - An efficient model for accurate intron selection from multiple RNA-seq samples
 
 Copyright (C) 2012-2016, and GNU GPL, by Guangyu Yang, Liliana Florea
 
@@ -7,7 +7,7 @@ Includes portions copyright from:
 SAMtools - Copyright (C) 2008-2009, Genome Research Ltd, Heng Li
 
 
-# Table of contents
+## Table of contents
 
 JULiP - An efficient model for accurate intron selection from multiple RNA-seq samples  
 Table of contents  
@@ -20,7 +20,7 @@ Terms of use
 Support  
 
 
-# What is JULiP?
+## What is JULiP?
 
 JULiP is a program for Intron selection from RNA-seq reads aligned to a genome from multi samples. 
 
@@ -29,7 +29,7 @@ Julip produces high quality in introns in two stages. Stage 1 collect the intron
 determine the gene regions by introns and mapped regions
 
 
-# Usage
+## Usage
 
 Sequantial version:  
 Usage: java -jar FeatureSelection.jar [options]  
@@ -55,13 +55,13 @@ See this official link for setting up a single node cluster
 https://hadoop.apache.org/docs/r2.7.2/hadoop-project-dist/hadoop-common/SingleCluster.html  
 and this link for cluster setup: https://hadoop.apache.org/docs/r2.7.2/hadoop-project-dist/hadoop-common/ClusterSetup.html  
 
-# Input/Output  
+## Input/Output  
 The primary input to CLASS is a set of short read alignments in BAM format and sorted by chromosome and position, for instance one produced with the program Tophat2 (http://tophat.cbcb.umd.edu).
 
 Given a set of alignment input .bam files, JULiP produces two intermediate data files, x.depth and x.splice in the temporary working directory.
 
 
-# Example  
+## Example  
 sequential version:  
 java -jar FeatureSelection.jar \  
 	 -model generateSplicesAndRegions \  
@@ -82,13 +82,13 @@ hadoop jar FeatureSelectionForHadoop.jar
 $HADOOP_HOME/bin/hadoop fs -cat  /user/hadoop/splice_results/* > introns.txt.uniq  
 
 
-# Terms of use  
+## Terms of use  
 
 This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.  
 This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.  
 You should have received (LICENSE.txt) a copy of the GNU General Public License along with this program; if not, you can obtain one from http://www.gnu.org/licenses/gpl.txt or by writing to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA  
 
 
-# Support
+## Support
 
 Contact us at: gyang22@jhu.edu, florea@jhu.edu
