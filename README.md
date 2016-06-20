@@ -1,4 +1,4 @@
-###JULiP - An efficient model for accurate intron selection from multiple RNA-seq samples
+### <a name="julip"></a> JULiP - An efficient model for accurate intron selection from multiple RNA-seq samples
 
 Copyright (C) 2012-2016, and GNU GPL, by Guangyu Yang, Liliana Florea
 
@@ -7,18 +7,18 @@ Includes portions copyright from:
 SAMtools - Copyright (C) 2008-2009, Genome Research Ltd, Heng Li
 
 
-###Table of contents
+### <a name="table-of-contents"></a> Table of contents
 
-- [JULiP - An efficient model for accurate intron selection from multiple RNA-seq samples]()  
-- [Table of contents](##Table of contents)  
-- [What is JULiP?](##What is JULiP?)  
-- [Usage](##Usage)  
-- [Input/Output](##Input/Output)  
-- [Example](##Example)   
-- [Support](##Support)  
+- [JULiP - An efficient model for accurate intron selection from multiple RNA-seq samples](#julip)  
+- [Table of contents](#table-of-contents)  
+- [What is JULiP?](#what-is-julip)  
+- [Usage](#usage)  
+- [Input/Output](#inputoutput)  
+- [Example](#example)   
+- [Support](#support)  
 
 
-###What is JULiP?
+### <a name="what-is-julip"></a> What is JULiP?
 
 JULiP is a program for Intron selection from RNA-seq reads aligned to a genome from multi samples. 
 
@@ -27,7 +27,7 @@ Julip produces high quality in introns in two stages. Stage 1 collect the intron
 determine the gene regions by introns and mapped regions
 
 
-###Usage
+### <a name="usage"></a> Usage
 
 Sequantial version:  
 ```
@@ -36,7 +36,6 @@ Options:
  -bamFileList VAL     : a file contain the paths of the subExon files  
  -gene VAL            : geneId ID  
  -geneList VAL        : a file contain the gene names  
- -intronFileList VAL  : a file contain the paths of the intron files  
  -model VAL           : generateSpliceAndRegionFiles: generate splice & region files  
                         generateIntronFiles: generate intron files  
                         intronsSelection: do intron selection  
@@ -44,7 +43,8 @@ Options:
  -outFile VAL         : a file contain the paths of the output file  
  -p N                 : p-norm (default: 1.0)  
  -regionFileList VAL  : a file contain the paths of the region files  
- -spliceFileList VAL  : a file contain the paths of the splice files  
+ -spliceFileList VAL  : a file contain the paths of the splice files 
+ -intronFileList VAL  : a file contain the paths of the intron files  
  -stepSize N          : step size (default: 1.0)  
 ```
 Parallel version:  
@@ -59,13 +59,13 @@ https://hadoop.apache.org/docs/r2.7.2/hadoop-project-dist/hadoop-common/SingleCl
 and this link for cluster setup,  
 https://hadoop.apache.org/docs/r2.7.2/hadoop-project-dist/hadoop-common/ClusterSetup.html  
 
-###Input/Output  
+### <a name="inputoutput"></a> Input/Output  
 The primary input to CLASS is a set of short read alignments in BAM format and sorted by chromosome and position, for instance one produced with the program Tophat2 (http://tophat.cbcb.umd.edu).
 
 Given a set of alignment input .bam files, JULiP produces two intermediate data files, x.depth and x.splice in the temporary working directory.
 
 
-###Example  
+### <a name="example"></a> Example  
 Sequential version:  
 ```
 java -jar FeatureSelection.jar \  
@@ -88,6 +88,6 @@ hadoop jar FeatureSelectionForHadoop.jar -intronFileList intronFileList.txt
 hadoop fs -cat  /user/hadoop/splice_results/* > introns.txt.uniq  
 ```
 
-###Support
+### <a name="support"></a> Support
 
 Contact us at: gyang22@jhu.edu, florea@jhu.edu
