@@ -22,7 +22,7 @@ SAMtools - Copyright (C) 2008-2009, Genome Research Ltd, Heng Li
 
 JULiP is a program for Intron selection from RNA-seq reads aligned to a genome from multi samples. 
 
-Julip generate reliable introns in two stages. Stage 1 collect the introns from multiple samples extracted from spliced read alignments, filter the low quality introns, detect gene regions. Stage 2 use Lasso regulated linear programming to determine a set of introns for each gene region.
+JULiP generate reliable introns in two stages. Stage 1 collect the introns from multiple samples extracted from spliced read alignments, filter the low quality introns, detect gene regions. Stage 2 use Lasso regulated linear programming to determine a set of introns for each gene region.
 
 
 ### <a name="usage"></a> Usage
