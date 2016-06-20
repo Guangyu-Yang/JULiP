@@ -33,19 +33,19 @@ Sequantial version:
 ```
 Usage: java -jar JULiP.jar [options]  
 Options:  
- -bamFileList VAL     : a file contain the paths of the subExon files  
- -gene VAL            : geneId ID  
- -geneList VAL        : a file contain the gene names  
  -model VAL           : generateSpliceAndRegionFiles: generate splice & region files  
                         generateIntronFiles: generate intron files  
                         intronsSelection: do intron selection  
+ -gene VAL            : geneId ID  
+ -geneList VAL        : a file contain the gene names  
  -noiseLevel N        : noise level (default: 6)  
  -outFile VAL         : a file contain the paths of the output file  
  -p N                 : p-norm (default: 1.0)  
+ -stepSize N          : step size (default: 1.0)  
+ -bamFileList VAL     : a file contain the paths of the subExon files  
  -regionFileList VAL  : a file contain the paths of the region files  
  -spliceFileList VAL  : a file contain the paths of the splice files 
  -intronFileList VAL  : a file contain the paths of the intron files  
- -stepSize N          : step size (default: 1.0)  
 ```
 Parallel version:  
 ```
