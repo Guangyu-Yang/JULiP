@@ -63,15 +63,15 @@ https://hadoop.apache.org/docs/r2.7.2/hadoop-project-dist/hadoop-common/ClusterS
 ### <a name="inputoutput"></a> Input/Output  
 The primary input to JULiP is a set of short read alignments in BAM format and sorted by chromosome and position, for instance one produced with the program Tophat2 (http://tophat.cbcb.umd.edu).
 
-Given a set of alignment input x.bam files, JULiP produces three type of intermediate data files, regions.txt, splices.txt and introns.txt in the .bam file directory. An gene.txt (contains all the detected gene region) and three list files (contain the paths of the regions.txt, splices.txt and introns.txt) in working directory.
+Given a set of alignment input x.bam files, JULiP produces three type of intermediate data files, x.region, x.splice and x.intron in the .bam file directory. An gene.txt (contains all the detected gene region) and three list files (contain the paths of the .region files, .splice files and .intron files) in working directory.
 
-- The format of the regions.txt file is:  
+- The format of the x.region file is:  
 chrom_id position #_of_reads_on_the_position  
 
-- The format of the splices.txt file is:  
+- The format of the x.splice file is:  
 chrom_id start_intron_position end_intron_position #_of_supporting_reads strand  
 
-- The format of the introns.txt file is:  
+- The format of the x.intron file is:  
 chrom_id start_intron_position end_intron_position #_of_supporting_reads strand
 
 The final output, consisting of selected introns.
