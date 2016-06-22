@@ -31,28 +31,28 @@ Sequantial version:
 ```
 Usage: java -jar JULiP.jar [options]  
 Options:  
- -model VAL           : generateSpliceAndRegionFiles: generate splice & region files  
-                        generateIntronFiles: generate intron files  
-                        intronsSelection: do intron selection  
- -gene VAL            : gene region id, "all" for all gene regions  
- -geneList VAL        : the file contains the gene region ids  
- -noiseLevel N        : noise level (default: 6)  
- -outFile VAL         : the file storing the output of JULiP  
- -p N                 : p-norm (default: 1.0)  
- -stepSize N          : step size (default: 1.0)  
- -bamFileList VAL     : the file contains the paths of the bam files  
- -regionFileList VAL  : the file contains the paths of the region files  
- -spliceFileList VAL  : the file contains the paths of the splice files 
- -intronFileList VAL  : the file contains the paths of the intron files  
+ -model VAL           : generateSpliceAndRegionFiles: generate splice & region files
+                        generateIntronFiles: generate intron files
+                        intronsSelection: do intron selection
+ -gene VAL            : gene region id, "all" for all gene regions
+ -geneList VAL        : the file contains the gene region ids
+ -noiseLevel N        : noise level (default: 6)
+ -outFile VAL         : the file storing the output of JULiP
+ -p N                 : p-norm (default: 1.0)
+ -stepSize N          : step size (default: 1.0)
+ -bamFileList VAL     : the file contains the paths of the bam files
+ -regionFileList VAL  : the file contains the paths of the region files
+ -spliceFileList VAL  : the file contains the paths of the splice files
+ -intronFileList VAL  : the file contains the paths of the intron files
 ```
 Parallel version:  
 ```
-Usage: hadoop jar JULiPForHadoop.jar [options]  
-Options:  
- -noiseLevel N        : noise level (default: 6)  
- -p N                 : p-norm (default: 1.0)  
- -stepSize N          : step size (default: 1.0)  
- -intronFileList VAL  : the file contains the paths of the intron files  
+Usage: hadoop jar JULiPForHadoop.jar [options]
+Options:
+ -noiseLevel N        : noise level (default: 6)
+ -p N                 : p-norm (default: 1.0)
+ -stepSize N          : step size (default: 1.0)
+ -intronFileList VAL  : the file contains the paths of the intron files
 ```
 Configure Hadoop:  
 See this official link for setting up a single node cluster,  
@@ -84,24 +84,24 @@ NOTE: place .bam files in different directories.
 ### <a name="example"></a> Example  
 Sequential version:  
 ```
-java -jar JULiP.jar \  
-	 -model generateSplicesAndRegions \  
-	 -bamFileList bamFileList.txt  
+java -jar JULiP.jar \
+	 -model generateSplicesAndRegions \
+	 -bamFileList bamFileList.txt
 
-java -jar JULiP.jar \  
-	 -model generateIntronFiles  
+java -jar JULiP.jar \
+	 -model generateIntronFiles
 
-java -jar JULiP.jar \  
-     -model intronsSelection \  
-     -gene all \  
-     -geneList genes.txt \  
-     -outFile introns_selection_result.txt  
+java -jar JULiP.jar \
+     -model intronsSelection \
+     -gene all \
+     -geneList genes.txt \
+     -outFile introns_selection_result.txt
 ```
 Parallel version:  
 ```
-hadoop fs -mkdir -p /user/hadoop  
-hadoop jar JULiPForHadoop.jar -intronFileList intronFileList.txt  
-hadoop fs -cat  /user/hadoop/splice_results/* > introns.txt.uniq  
+hadoop fs -mkdir -p /user/hadoop
+hadoop jar JULiPForHadoop.jar -intronFileList intronFileList.txt
+hadoop fs -cat  /user/hadoop/splice_results/* > introns.txt.uniq
 ```
 
 ### <a name="support"></a> Support
