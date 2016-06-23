@@ -29,17 +29,19 @@ JULiP generate reliable introns in two stages. Stage 1 collect the introns from 
 
 Sequantial version:  
 ```
-Usage: java -jar JULiP.jar [options]  
+Usage: java -jar julip.jar [options]  
 Options:  
- -model VAL           : generateSpliceAndRegionFiles: generate splice & region files
-                        generateIntronFiles: generate intron files
-                        intronsSelection: do intron selection
- -outFile VAL         : the file storing the output of JULiP
- -bamFileList VAL     : the file contains the paths of the bam files
+ -model VAL       : generateSplicesAndRegions: generate splices & regions
+                    generateIntronFiles: generate intron files
+                    intronsSelection: do intron selection 
+ -bamFileList VAL : the file contains the paths of the bam files
+ -clean VAL       : true: delete the temporary files; false: keep the
+                    termporary files (default: true)
+ -outFile VAL     : the file storing the output of JULiP
 ```
 Parallel version:  
 ```
-Usage: hadoop jar JULiPForHadoop.jar [options]
+Usage: hadoop jar julipForHadoop.jar [options]
 Options:
  -noiseLevel N        : noise level (default: 6)
  -p N                 : p-norm (default: 1.0)
@@ -76,21 +78,21 @@ NOTE: place .bam files in different directories.
 ### <a name="example"></a> Example  
 Sequential version:  
 ```
-java -jar JULiP.jar \
+java -jar julip.jar \
 	 -model generateSplicesAndRegions \
 	 -bamFileList bamFileList.txt
 
-java -jar JULiP.jar \
+java -jar julip.jar \
 	 -model generateIntronFiles
 
-java -jar JULiP.jar \
+java -jar julip.jar \
      -model intronsSelection \
      -outFile introns_selection_result.txt
 ```
 Parallel version:  
 ```
 hadoop fs -mkdir -p /user/hadoop
-hadoop jar JULiPForHadoop.jar -intronFileList intronFileList.txt
+hadoop jar julipForHadoop.jar -intronFileList intronFileList.txt
 hadoop fs -cat  /user/hadoop/splice_results/* > introns.txt.uniq
 ```
 
