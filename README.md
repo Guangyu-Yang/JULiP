@@ -34,16 +34,8 @@ Options:
  -model VAL           : generateSpliceAndRegionFiles: generate splice & region files
                         generateIntronFiles: generate intron files
                         intronsSelection: do intron selection
- -gene VAL            : gene region id, "all" for all gene regions
- -geneList VAL        : the file contains the gene region ids
- -noiseLevel N        : noise level (default: 6)
  -outFile VAL         : the file storing the output of JULiP
- -p N                 : p-norm (default: 1.0)
- -stepSize N          : step size (default: 1.0)
  -bamFileList VAL     : the file contains the paths of the bam files
- -regionFileList VAL  : the file contains the paths of the region files
- -spliceFileList VAL  : the file contains the paths of the splice files
- -intronFileList VAL  : the file contains the paths of the intron files
 ```
 Parallel version:  
 ```
@@ -93,8 +85,6 @@ java -jar JULiP.jar \
 
 java -jar JULiP.jar \
      -model intronsSelection \
-     -gene all \
-     -geneList genes.txt \
      -outFile introns_selection_result.txt
 ```
 Parallel version:  
