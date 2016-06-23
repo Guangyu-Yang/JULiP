@@ -43,9 +43,6 @@ Parallel version:
 ```
 Usage: hadoop jar julipForHadoop.jar [options]
 Options:
- -noiseLevel N        : noise level (default: 6)
- -p N                 : p-norm (default: 1.0)
- -stepSize N          : step size (default: 1.0)
  -intronFileList VAL  : the file contains the paths of the intron files
 ```
 Configure Hadoop:  
