@@ -20,7 +20,7 @@ SAMtools - Copyright (C) 2008-2009, Genome Research Ltd, Heng Li
 
 JULiP selects a comprehensive and accurate set of introns simultaneously from multiple RNA-seq samples. 
 
-JULiP produces a reliable set of introns in two stages. Stage 1 collects the introns from multiple samples, extracted from spliced read alignments, filtering low quality introns. Stage 2 divides the introns across the genome into 'gene' regions. Stage 3 uses a Lasso-regularized program to determine a set of introns for each gene region.
+JULiP produces a reliable set of introns in three stages. Stage 1 collects the introns from multiple samples, extracted from spliced read alignments, filtering low quality introns. Stage 2 divides the introns across the genome into 'gene' regions. Stage 3 uses a Lasso-regularized program to determine a set of introns for each gene region.
 
 
 ### <a name="usage"></a> Usage
@@ -51,9 +51,9 @@ and this link for cluster setup:
 https://hadoop.apache.org/docs/r2.7.2/hadoop-project-dist/hadoop-common/ClusterSetup.html  
 
 ### <a name="inputoutput"></a> Input/Output  
-The primary input to JULiP is a set of RNA-seq alignment files, each in BAM format and sorted by chromosome and position, for instance as produced with the program Tophat2 (http://tophat.cbcb.umd.edu).
+The primary input to JULiP is a set of RNA-seq alignment files, each in BAM format and sorted by chromosome and position, for instance as produced with the program [Tophat2](http://tophat.cbcb.umd.edu).
 
-Given a collection of input alignment file {x}.bam files, JULiP generates three types of intermediate data files in each of the directories hosting the BAM files, namely: {x}.region ('gene' regions), {x}.splice (candidate introns) and {x}.intron (selected introns). Additionally, it generates the files gene.txt, containing all the detected gene regions, and three list files, containing the paths to the .region, .splice and .intron files for all input data sets, in the working directory.
+Given a collection of input alignment file {x}.bam files, JULiP generates three types of intermediate data files in each of the directories hosting the BAM files, namely: {x}.region ('gene' regions), {x}.splice (candidate introns) and {x}.intron (selected introns). Additionally, it generates the file gene.txt, containing all the detected gene regions, and three list files, containing the paths to the .region, .splice and .intron files for each input data set, in the working directory.
 
 - The format of the x.region file is:  
 chrom_id position #_of_reads_on_the_position  
