@@ -66,7 +66,7 @@ chrom_id start_intron_position end_intron_position #_of_supporting_reads strand
 
 The final output, consisting of selected introns.
 - The format of the output file is:  
-chrom_id start_intron_position end_intron_position selection_flag gene_region_id
+chrom_id start_intron_position end_intron_position selection_flag gene_region_id beta reads_in_samples
 
 
 ### <a name="example"></a> Example  
