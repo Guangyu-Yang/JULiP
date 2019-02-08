@@ -6,6 +6,8 @@ Includes portions copyright from:
 
 SAMtools - Copyright (C) 2008-2009, Genome Research Ltd, Heng Li
 
+**Note: for the negative binomial version of JULiP, including the differential splicing testing, please go to** https://github.com/splicebox/JULiP
+
 
 ### <a name="table-of-contents"></a> Table of contents
 
